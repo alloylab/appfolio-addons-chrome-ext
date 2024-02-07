@@ -1,0 +1,26 @@
+/* Increase Main Container Width */
+#content .main-container{
+    max-width:100% !important;
+}
+
+/* Increase Search Bar Width */
+div[data-search-term] {
+    max-width:800px !important;
+}
+
+/* Fix Menu Overlay-ing Search */
+#sidebar {
+    z-index:1 !important;
+}
+
+/* Hide Stuff */
+#add_ons_link,
+.graph-table-toggle,
+#leasing-activity-income-verification,
+#online_payments .dashboard-widget__subtitle,
+.main-container .js-footer,
+.intercom-lightweight-app,
+#logo {
+    display:none !important;
+    visibility:hidden !important;
+}
