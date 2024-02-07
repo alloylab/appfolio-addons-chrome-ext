@@ -7,15 +7,15 @@
 2. Markdown Support for Notes
 
 #### UI Cleanup
-1. Increases width of main container to leverage space on wide screens, a number of items that are annoying in the UI.
-2. Changes the link for Rental Applications on Dashboard from the report to the applications page
+1. Increases width of main container to leverage space on wide screens, a number of items are hidden that are annoying in the UI.
+2. Changes the link for Rental Applications on Dashboard from the report to the applications page.
 
-Here is screenshot of the Dashboard
+Here is a screenshot of the Dashboard
 
 ![notes markdown](images/screenshot1.png)
 
 #### Mark Down for Notes
-Enhances notes section Appfolio to support markdown
+Enhances notes section in Appfolio to support markdown
 
 [Markdown Guide](https://www.markdownguide.org/)
 
