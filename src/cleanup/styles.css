@@ -18,6 +18,34 @@ div[data-search-term] {
     z-index:1 !important;
 }
 
+/* What's New Double Scroll Fix */
+.jsx-201526664 {
+    max-height:100% !important;
+}
+
+/* Remove Redundant Page Titles */
+.page-title {
+    margin:0 !important;
+}
+
+/* Hide Owners Image */
+.owners .grid__2 {
+    display:none !important;
+    visibility:hidden !important;
+}
+.owners .grid__large-10 {
+    width:100% !important;
+}
+
+/* Hide Vendors Image */
+.vendors .grid__2 {
+    display:none !important;
+    visibility:hidden !important;
+}
+.vendors .grid__large-10 {
+    width:100% !important;
+}
+
 /* Hide Stuff */
 #add_ons_link,
 .graph-table-toggle,
@@ -25,6 +53,7 @@ div[data-search-term] {
 #online_payments .dashboard-widget__subtitle,
 .main-container .js-footer,
 .intercom-lightweight-app,
+.js-print-rental-application-link,
 #logo {
     display:none !important;
     visibility:hidden !important;
