@@ -12,7 +12,8 @@
             ],
             "js": [
                 "vendor/jquery.min.js",
-                "vendor/showdown.min.js",
+                "vendor/purify.min.js",
+                "vendor/marked.min.js",
                 "cleanup/script.js",
                 "notes/script.js"
             ]
