@@ -1,8 +1,8 @@
 {
     "name": "Appfolio Addons",
     "manifest_version": 3,
-    "version": "1.2.0",
-    "description": "This extension cleans up annoying things within AF UI and add some features in browser.",
+    "version": "1.2.1",
+    "description": "This extension cleans up AF UI and adds additional features.",
     "host_permissions": ["https://*.appfolio.com/*"],
     "content_scripts": [
         {
