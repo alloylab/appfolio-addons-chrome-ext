@@ -1,10 +1,23 @@
-setTimeout(function () {
-    $('.note__contents').each(function () {
-        let note = $(this).find('.js-note-text');
-        let content = note.html().replace(/&lt;/g, '<').replace(/&gt;/g, '>').replace(/<\bspan\b>/g, '').replace(/<\/\bspan\b>/g, '').trim();
+//MutationObserver for JS Rendered Elements
+const notesObserver = new MutationObserver(function (mutations, mutationInstance) {
 
-        let converter = new showdown.Converter();
-        let markdown = converter.makeHtml(content);
-        $(this).replaceWith(markdown);
-    });
-}, 1000);
+    //MarkDown for Notes
+    let notes = $('.note__contents');
+    if (notes.length > 0) {
+        notes.each(function () {
+            let note = $(this).find('.js-note-text');
+            let content = note.html().replace(/&lt;/g, '<').replace(/&gt;/g, '>')
+                .replace(/<\bspan\b>/g, '').replace(/<\/\bspan\b>/g, '').trim();
+
+            let converter = new showdown.Converter();
+            let markdown = converter.makeHtml(content);
+            $(this).replaceWith(markdown);
+        });
+        mutationInstance.disconnect();
+    }
+});
+
+notesObserver.observe(document, {
+    childList: true,
+    subtree:   true
+});
