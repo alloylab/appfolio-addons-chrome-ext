@@ -1,5 +1,5 @@
 //MutationObserver for JS Rendered Elements
-const notesObserver = new MutationObserver(function (mutations, mutationInstance) {
+const notesObserver = new MutationObserver(function () {
 
     //MarkDown for Notes
     let notes = $('.note__contents');
@@ -13,7 +13,6 @@ const notesObserver = new MutationObserver(function (mutations, mutationInstance
             let markdown = converter.makeHtml(content);
             $(this).replaceWith(markdown);
         });
-        mutationInstance.disconnect();
     }
 });
 

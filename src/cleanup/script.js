@@ -1,11 +1,10 @@
 //MutationObserver for JS Rendered Elements
-const cleanupObserver = new MutationObserver(function (mutations, mutationInstance) {
+const cleanupObserver = new MutationObserver(function () {
 
     // Change Dashboard Application Link
     let application = $('.js-rental-applications-total');
     if (application.length > 0) {
         application.attr('href', '/rental_applications').removeAttr('target');
-        mutationInstance.disconnect();
     }
 });
 
