@@ -8,6 +8,11 @@ div[data-search-term] {
     max-width:800px !important;
 }
 
+/* Fix Property Calendar Page */
+#property-header {
+    grid-template-columns:1fr !important;
+}
+
 /* Fix Menu Overlay-ing Search */
 #sidebar {
     z-index:1 !important;
