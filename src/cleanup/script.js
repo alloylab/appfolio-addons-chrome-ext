@@ -23,8 +23,7 @@ if(billDetails.length > 0) {
 
     $.getJSON(base_url + vendor, function(data) {
         let link = data.data['0'].links.self;
-        let payee = $('<a></a>').attr('href',link)
-            .append(vendor);
+        let payee = $('<a></a>').attr('href',link).append(vendor);
 
         $('#bill-info-section .datapair__value').first().replaceWith(payee);
     });
