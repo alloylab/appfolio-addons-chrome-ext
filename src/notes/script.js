@@ -1,7 +1,5 @@
-//MutationObserver for JS Rendered Elements
+//MutationObserver for MarkDown for Notes
 const notesObserver = new MutationObserver(function () {
-
-    //MarkDown for Notes
     let notes = $('.note__contents');
     if (notes.length > 0) {
         notes.each(function () {
@@ -15,7 +13,6 @@ const notesObserver = new MutationObserver(function () {
         });
     }
 });
-
 notesObserver.observe(document, {
     childList: true,
     subtree:   true

@@ -7,7 +7,6 @@ const cleanupObserver = new MutationObserver(function () {
         application.attr('href', '/rental_applications').removeAttr('target');
     }
 });
-
 cleanupObserver.observe(document, {
     childList: true,
     subtree:   true
