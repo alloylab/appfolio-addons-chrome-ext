@@ -7,6 +7,7 @@
     "content_scripts": [
         {
             "matches": ["https://*.appfolio.com/*"],
+            "exclude_matches": ["https://help.appfolio.com/*", "https://feedback.appfolio.com/*"],
             "css": [
                 "cleanup/styles.css"
             ],
