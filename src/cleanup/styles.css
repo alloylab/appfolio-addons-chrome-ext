@@ -59,7 +59,8 @@ aside#sidebar, aside#property-sidebar {
 .main-container .js-footer,
 .intercom-lightweight-app,
 .js-print-rental-application-link,
-#logo {
+#logo,
+aside.future-start-sidebar div:nth-child(3) div.start-sidebar-menu-row {
     display:none !important;
     visibility:hidden !important;
 }
