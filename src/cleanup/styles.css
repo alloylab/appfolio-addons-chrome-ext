@@ -8,6 +8,11 @@ div[data-search-term] {
     max-width:800px !important;
 }
 
+/* Increase Report Font-Size */
+.ag-cell-wrapper {
+    font-size: 16px !important;
+}
+
 /* Fix Property Calendar Page */
 #property-header {
     grid-template-columns:1fr !important;
