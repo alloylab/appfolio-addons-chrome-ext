@@ -19,7 +19,7 @@ div[data-search-term] {
 }
 
 /* Fix Menu Overlay-ing Search */
-#sidebar {
+aside#sidebar, aside#property-sidebar {
     z-index:1 !important;
 }
 
