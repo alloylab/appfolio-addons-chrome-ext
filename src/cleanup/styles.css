@@ -1,11 +1,16 @@
 /* Increase Main Container Width */
-#content .main-container{
-    max-width:100% !important;
+#content .main-container {
+    max-width: 100% !important;
+}
+
+/* Fix Main Container Width on Calendar Pages */
+#property-content .container-xl {
+    max-width: 100% !important;
 }
 
 /* Increase Search Bar Width */
 div[data-search-term] {
-    max-width:800px !important;
+    max-width: 800px !important;
 }
 
 /* Increase Report Font-Size */
@@ -13,9 +18,19 @@ div[data-search-term] {
     font-size: 16px !important;
 }
 
-/* Fix Property Calendar Page */
+/* Fix Property Calendar Header */
 #property-header {
-    grid-template-columns:1fr !important;
+    grid-template-columns: 1fr !important;
+}
+
+/* Fix Calendar Double Scroll */
+.js-calendar-container .mt-2 {
+    height: 100% !important;
+}
+.js-calendar-container .rbc-allday-cell .rbc-row-bg,
+.js-calendar-container .rbc-allday-cell .rbc-row-content,
+.js-calendar-container .rbc-time-header-cell {
+    overflow-y: auto !important;
 }
 
 /* Fix Menu Overlay-ing Search */
@@ -25,30 +40,59 @@ aside#sidebar, aside#property-sidebar {
 
 /* What's New Double Scroll Fix */
 .jsx-201526664 {
-    max-height:100% !important;
+    max-height: 100% !important;
 }
 
 /* Remove Redundant Page Titles */
 .page-title {
-    margin:0 !important;
+    margin: 0 !important;
 }
 
 /* Hide Owners Image */
 .owners .grid__2 {
-    display:none !important;
-    visibility:hidden !important;
+    display: none !important;
+    visibility: hidden !important;
 }
 .owners .grid__large-10 {
-    width:100% !important;
+    width: 100% !important;
+}
+
+/* Hide Property Image */
+.properties #attached-photos-default-photo {
+    display: none !important;
+    visibility: hidden !important;
+}
+.properties .grid__large-9 {
+    width: 100% !important;
+}
+
+/* Hide Unit Image */
+.units .grid__3 {
+    display: none !important;
+    visibility: hidden !important;
+}
+.units .grid__large-9 {
+    width: 100% !important;
 }
 
 /* Hide Vendors Image */
 .vendors .grid__2 {
-    display:none !important;
-    visibility:hidden !important;
+    display: none !important;
+    visibility: hidden !important;
 }
 .vendors .grid__large-10 {
     width:100% !important;
+}
+
+/* Hide New Info Messages */
+#content .alert-info {
+    display: none !important;
+    visibility: hidden !important;
+}
+
+/* Fix SMS Inbox Scroll */
+#advanced_inbox_root .row .col {
+    max-height: 76vh !important;
 }
 
 /* Hide Stuff */
@@ -61,6 +105,6 @@ aside#sidebar, aside#property-sidebar {
 .js-print-rental-application-link,
 #logo,
 aside.future-start-sidebar div:nth-child(3) div.start-sidebar-menu-row {
-    display:none !important;
-    visibility:hidden !important;
+    display: none !important;
+    visibility: hidden !important;
 }

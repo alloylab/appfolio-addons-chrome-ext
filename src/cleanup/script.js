@@ -2,9 +2,38 @@
 const cleanupObserver = new MutationObserver(function () {
 
     // Change Dashboard Application Link
-    let application = $('.js-rental-applications-total');
-    if (application.length > 0) {
-        application.attr('href', '/rental_applications').removeAttr('target');
+    let application = document.querySelector('.js-rental-applications-total');
+
+    if (application) {
+        application.setAttribute('href', '/rental_applications');
+        application.removeAttribute('target');
+    }
+
+    //Change Guest Card Link
+    const guestCardRows = document.querySelectorAll('#guest_cards_table table tbody tr');
+
+    guestCardRows.forEach(row => {
+        const link = row.querySelector('a');
+
+        if (link) {
+            const checkbox = row.querySelector('input[type="checkbox"]');
+
+            if (checkbox) {
+                const gcId = checkbox.value;
+
+                link.href = '/guest_cards/' + gcId;
+            }
+        }
+    });
+
+    //Hide Signals
+    const targetLink = document.querySelector('a[href="/v_plus_services_marketplace/leasing_signals"]');
+
+    if (targetLink) {
+        const parentLi = targetLink.closest('li');
+        if (parentLi) {
+            parentLi.style.display = 'none';
+        }
     }
 });
 cleanupObserver.observe(document, {
@@ -12,19 +41,4 @@ cleanupObserver.observe(document, {
     subtree:   true
 });
 
-//Hide Signals
-$('a[href="/v_plus_services_marketplace/leasing_signals"]').closest('li').hide();
 
-//Hyper Link Payee on Bill Details
-let billDetails = $('#bill-info-section .datapair__value');
-if(billDetails.length > 0) {
-    let base_url = '/remote_search/api/global_search_documents?page[size]=1&filter[section_keys]=people&filter[search_source]=global_search&fields[global_search_documents]=section_key%2Cresult_type%2Chidden&filter[search_term]=';
-    let vendor = billDetails.first().text();
-
-    $.getJSON(base_url + vendor, function(data) {
-        let link = data.data['0'].links.self;
-        let payee = $('<a></a>').attr('href',link).append(vendor);
-
-        $('#bill-info-section .datapair__value').first().replaceWith(payee);
-    });
-}
