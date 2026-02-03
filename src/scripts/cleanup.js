@@ -1,4 +1,3 @@
-//MutationObserver for JS Rendered Elements
 const cleanupObserver = new MutationObserver(function () {
 
     // Change Dashboard Application Link
@@ -40,5 +39,3 @@ cleanupObserver.observe(document, {
     childList: true,
     subtree:   true
 });
-
-

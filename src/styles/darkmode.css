@@ -1,0 +1,36 @@
+html.dark-mode {
+    filter: invert(1) hue-rotate(180deg);
+}
+
+html.dark-mode .text-white {
+    color: #000000 !important;
+    --bs-text-opacity: 1 !important;
+}
+
+html.dark-mode .bg-black {
+    background-color: #000000 !important;
+    --bs-bg-opacity: 1 !important;
+}
+
+html.dark-mode img,
+html.dark-mode video,
+html.dark-mode .keep-colors {
+    filter: invert(1) hue-rotate(180deg);
+}
+
+body.dark-mode {
+    background-color: #121212;
+    box-shadow: none !important;
+}
+
+html.dark-mode #nav_bar {
+    background-color: #fff !important;
+    border: 0 !important;
+    color: #fff !important;
+}
+
+html.dark-mode .card,
+html.dark-mode [class*="shadow"] {
+    box-shadow: none !important;
+    border: 1px solid #444 !important;
+}

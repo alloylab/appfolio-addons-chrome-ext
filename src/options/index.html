@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <style>
+            body {
+                font-family: sans-serif;
+                padding: 20px;
+                line-height: 1.6;
+            }
+            .option-group {
+                margin-bottom: 15px;
+            }
+            label {
+                display: block;
+                margin-bottom: 5px;
+                font-weight: bold;
+            }
+            #status {
+                margin-top: 10px;
+                height: 20px;
+                color: #2e7d32; /* Green status text */
+                font-size: 1.5em;
+            }
+            button {
+                padding: 8px 16px;
+                cursor: pointer;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="option-group">
+            <label>
+                <input type="checkbox" id="markdown-toggle" />
+                Enable Markdown Notes
+            </label>
+            <label>
+                <input type="checkbox" id="darkmode-toggle" />
+                Enable Dark Mode
+            </label>
+        </div>
+
+        <button id="save">Save Settings</button>
+        <div id="status"></div>
+        <script src="script.js"></script>
+    </body>
+</html>

@@ -1,21 +1,34 @@
 {
     "name": "Appfolio Addons",
     "manifest_version": 3,
-    "version": "1.3.3",
+    "version": "1.3.4",
     "description": "This extension cleans up the AF user interface and adds additional features.",
     "host_permissions": ["https://*.appfolio.com/*"],
+    "options_ui": {
+        "page": "options/index.html",
+        "open_in_tab": false
+    },
+    "permissions": ["storage"],
     "content_scripts": [
         {
             "matches": ["https://*.appfolio.com/*"],
-            "exclude_matches": ["https://help.appfolio.com/*", "https://feedback.appfolio.com/*"],
+            "exclude_matches": [
+                "https://appfolio.com/*",
+                "https://www.appfolio.com/*",
+                "https://help.appfolio.com/*",
+                "https://feedback.appfolio.com/*"
+            ],
+            "run_at": "document_start",
             "css": [
-                "cleanup/styles.css"
+                "styles/cleanup.css",
+                "styles/darkmode.css"
             ],
             "js": [
                 "vendor/purify.min.js",
                 "vendor/marked.min.js",
-                "cleanup/script.js",
-                "notes/script.js"
+                "scripts/css.js",
+                "scripts/cleanup.js",
+                "scripts/notes.js"
             ]
         }
     ]

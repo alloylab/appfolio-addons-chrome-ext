@@ -104,6 +104,7 @@ aside#sidebar, aside#property-sidebar {
 .intercom-lightweight-app,
 .js-print-rental-application-link,
 #logo,
+#workflows_command_center_root,
 aside.future-start-sidebar div:nth-child(3) div.start-sidebar-menu-row {
     display: none !important;
     visibility: hidden !important;
