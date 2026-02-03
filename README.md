@@ -4,13 +4,15 @@
 
 ### Features
 1. UI Cleanup
-2. Markdown Support for Notes
+2. Dark Mode Option
+3. Leverage Old Guest Card UI
+4. Changes the link for Rental Applications on Dashboard from the report to the applications page
+5. Markdown Support for Notes
 
 #### UI Cleanup
 1. Increases width of main container to leverage space on wide screens.
 2. Hides a number of elements, including support chat, advertisements for upgrades, signals, and another annoying things. 
 3. Changes the link for Rental Applications on Dashboard from the report to the applications page.
-4. Leverage Old Guest Card UI
 
 Here is a screenshot of the Dashboard
 
