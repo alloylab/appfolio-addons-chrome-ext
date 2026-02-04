@@ -87,3 +87,16 @@ html.dark-mode [class*="shadow"] {
     box-shadow: none !important;
     border: 1px solid #444 !important;
 }
+
+.dark-mode #global-search-container input {
+    border-color: #8f97a3 !important;
+}
+
+.dark-mode #global-search-container .dropdown-menu {
+    box-shadow: none !important;
+}
+
+.dark-mode header#property-header {
+    background-color: #ffffff !important;
+    border: 0 !important;
+}
