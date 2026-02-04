@@ -1,3 +1,56 @@
+#theme-toggle-wrapper {
+    display: inline-flex !important;
+    z-index: 9999 !important;
+    position: fixed;
+    visibility: visible !important;
+    top: .85rem;
+    left: .5rem;;
+}
+
+#theme-toggle {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease;
+}
+
+#theme-toggle:hover {
+    background-color: rgba(128, 128, 128, 0.1);
+}
+
+#theme-toggle:focus {
+    outline: none;
+    outline-offset: 2px;
+    box-shadow: none;
+}
+
+/* Icon Sizes & Colors */
+.theme-icon {
+    width: 20px;
+    height: 20px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+#sun-icon { color: #39FF14; }
+#moon-icon { color: #39FF14; }
+
+/* Logic for Swapping */
+.hidden {
+    display: none !important;
+}
+
+/* Dark Mode Adjustments */
+.dark-mode #moon-icon { color: #9ca3af; } /* Lighter gray for moon in dark mode */
+.dark-mode #theme-toggle:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+
 html.dark-mode {
     filter: invert(1) hue-rotate(180deg);
 }

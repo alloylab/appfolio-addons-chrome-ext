@@ -1,3 +1,15 @@
+html #property-header {
+    grid-template-columns: 1fr !important;
+}
+
+html #global-search-container {
+    margin-left: 50px !important;
+}
+
+html #property-content .container-xl {
+    max-width: 100% !important;
+}
+
 /* Increase Main Container Width */
 #content .main-container {
     max-width: 100% !important;
@@ -93,6 +105,11 @@ aside#sidebar, aside#property-sidebar {
 /* Fix SMS Inbox Scroll */
 #advanced_inbox_root .row .col {
     max-height: 76vh !important;
+}
+
+/* Set Left Margin on Global Search for Dark/Light Mode Toggle */
+#global-search-container {
+    margin-left: 50px !important;
 }
 
 /* Hide Stuff */
