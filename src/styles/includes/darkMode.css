@@ -1,10 +1,12 @@
 #theme-toggle-wrapper {
     display: inline-flex !important;
-    z-index: 9999 !important;
-    position: fixed;
+    z-index: 2147483647 !important;
+    position: fixed !important;
     visibility: visible !important;
-    top: .85rem;
-    left: .5rem;;
+    opacity: 1 !important;
+    top: .85rem !important;
+    left: .5rem !important;
+    margin: 0 !important;
 }
 
 #theme-toggle {
@@ -12,10 +14,12 @@
     border: none;
     cursor: pointer;
     padding: 8px;
+    margin: 0;
     border-radius: 8px;
     display: flex;
     align-items: center;
     justify-content: center;
+    line-height: 0;
     transition: background-color 0.3s ease;
 }
 
@@ -30,27 +34,37 @@
 }
 
 /* Icon Sizes & Colors */
-.theme-icon {
-    width: 20px;
-    height: 20px;
+#theme-toggle .theme-icon {
+    display: block;
+    width: 20px !important;
+    height: 20px !important;
+    min-width: 20px;
+    min-height: 20px;
     transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
 #sun-icon { color: #39FF14; }
 #moon-icon { color: #39FF14; }
 
+/* In dark mode the whole page (toggle included) is run through
+   invert(1) hue-rotate(180deg). #39FF14 comes out as rgb(0,118,0), which is
+   nearly invisible on the inverted (black) nav bar. #009000 is the closest
+   in-gamut pre-image: it renders as #31c131 after the filter. */
+html.dark-mode #sun-icon { color: #009000; }
+
 /* Logic for Swapping */
-.hidden {
+#theme-toggle .theme-icon.hidden {
     display: none !important;
 }
 
 /* Dark Mode Adjustments */
-.dark-mode #moon-icon { color: #9ca3af; } /* Lighter gray for moon in dark mode */
 .dark-mode #theme-toggle:hover {
     background-color: rgba(255, 255, 255, 0.1);
 }
 
 
+/* The filter stays on <html>: a filter on <body> would turn AppFolio's own
+   position:fixed elements (modals, toasts) into body-relative boxes. */
 html.dark-mode {
     filter: invert(1) hue-rotate(180deg);
 }
@@ -69,11 +83,6 @@ html.dark-mode img,
 html.dark-mode video,
 html.dark-mode .keep-colors {
     filter: invert(1) hue-rotate(180deg);
-}
-
-body.dark-mode {
-    background-color: #121212;
-    box-shadow: none !important;
 }
 
 html.dark-mode #nav_bar {
@@ -100,3 +109,11 @@ html.dark-mode [class*="shadow"] {
     background-color: #ffffff !important;
     border: 0 !important;
 }
+
+/* Rendered-markdown notes: the original note text relies on <br>/pre-wrap,
+   rendered markdown brings its own block layout. */
+.js-note-text[data-af-addons="markdown"] {
+    white-space: normal;
+}
+.js-note-text[data-af-addons="markdown"] > :first-child { margin-top: 0; }
+.js-note-text[data-af-addons="markdown"] > :last-child { margin-bottom: 0; }

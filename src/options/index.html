@@ -1,11 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
+        <meta charset="utf-8" />
+        <title>Appfolio Addons Options</title>
         <style>
             body {
                 font-family: sans-serif;
                 padding: 20px;
                 line-height: 1.6;
+                min-width: 260px;
             }
             .option-group {
                 margin-bottom: 15px;
@@ -14,33 +17,28 @@
                 display: block;
                 margin-bottom: 5px;
                 font-weight: bold;
+                cursor: pointer;
             }
             #status {
-                margin-top: 10px;
                 height: 20px;
-                color: #2e7d32; /* Green status text */
-                font-size: 1.5em;
-            }
-            button {
-                padding: 8px 16px;
-                cursor: pointer;
+                color: #2e7d32;
+                font-size: 0.9em;
             }
         </style>
     </head>
     <body>
         <div class="option-group">
             <label>
-                <input type="checkbox" id="markdown-toggle" />
+                <input type="checkbox" id="markdown-toggle" data-setting="isMarkdownEnabled" />
                 Enable Markdown Notes
             </label>
             <label>
-                <input type="checkbox" id="darkmode-toggle" />
+                <input type="checkbox" id="darkmode-toggle" data-setting="isDarkModeEnabled" />
                 Enable Dark Mode
             </label>
         </div>
 
-        <button id="save">Save Settings</button>
-        <div id="status"></div>
+        <div id="status" role="status" aria-live="polite"></div>
         <script src="script.js"></script>
     </body>
 </html>

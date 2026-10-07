@@ -19,6 +19,8 @@ aside#sidebar, aside#property-sidebar {
 }
 
 /* What's New Double Scroll Fix */
+/* NOTE: hashed styled-jsx class; it will change whenever Appfolio redeploys that
+   component. If the double scrollbar comes back, this selector is why. */
 .jsx-201526664 {
     max-height: 100% !important;
 }
@@ -58,7 +60,11 @@ aside#sidebar, aside#property-sidebar {
 .js-print-rental-application-link,
 #logo,
 #workflows_command_center_root,
-aside.future-start-sidebar div:nth-child(3) div.start-sidebar-menu-row {
+/* NOTE: depends on child order inside the sidebar; brittle across Appfolio updates. */
+aside.future-start-sidebar div:nth-child(3) div.start-sidebar-menu-row,
+/* Hide Signals (was done in JS; :has() is supported since Chrome 105). */
+li:has(> a[href="/v_plus_services_marketplace/leasing_signals"]),
+li:has(a[href="/v_plus_services_marketplace/leasing_signals"]) {
     display: none !important;
     visibility: hidden !important;
 }
